@@ -1,6 +1,6 @@
 const usersDiv = document.querySelector(".users");
 
-fetch("http://localhost:8000/")
+fetch("http://139.59.125.100:8000/")
   .then((res) => res.json())
   .then((data) => {
     const users = data.users;
