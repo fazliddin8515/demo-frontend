@@ -1,6 +1,6 @@
 const usersDiv = document.querySelector(".users");
 
-fetch("/")
+fetch("/api")
   .then((res) => res.json())
   .then((data) => {
     const users = data.users;
