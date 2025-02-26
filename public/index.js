@@ -1,6 +1,6 @@
 const usersDiv = document.querySelector(".users");
 
-fetch("http://139.59.125.100:8000/")
+fetch("/")
   .then((res) => res.json())
   .then((data) => {
     const users = data.users;
@@ -25,4 +25,7 @@ fetch("http://139.59.125.100:8000/")
 
       usersDiv.appendChild(card);
     });
+  })
+  .catch((err) => {
+    console.log(err);
   });

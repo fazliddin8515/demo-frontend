@@ -1,13 +1,5 @@
-FROM node:22-slim
+FROM nginx:alpine
 
-WORKDIR /app
+COPY ./public /usr/share/nginx/html
 
-COPY package.json package-lock.json ./
-
-RUN npm i
-
-COPY . .
-
-EXPOSE 8080
-
-CMD [ "npm", "start" ]
+EXPOSE 80
